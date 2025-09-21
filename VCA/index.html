@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VitalCore Academy — Balance. Strength. Wellbeing.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-gray-800 bg-white"><nav class="bg-white shadow-sm">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-blue-500 flex items-center justify-center text-white font-bold">VC</div>
+        <div>
+          <div class="text-lg font-semibold">VitalCore Academy</div>
+          <div class="text-sm text-gray-500">Balance. Strength. Wellbeing.</div>
+        </div>
+      </a>
+      <div class="hidden md:flex gap-6 items-center">
+        <a href="about.html" class="text-gray-700 hover:text-green-600">About</a>
+        <a href="programs.html" class="text-gray-700 hover:text-green-600">Programs</a>
+        <a href="pricing.html" class="text-gray-700 hover:text-green-600">Pricing</a>
+        <a href="blog.html" class="text-gray-700 hover:text-green-600">Articles</a>
+        <a href="contact.html" class="bg-green-600 text-white px-4 py-2 rounded-lg shadow">Book Trial</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menuBtn" class="p-2 rounded-md border">
+          ☰
+        </button>
+      </div>
+    </div>
+  </nav>
+  <header class="bg-gradient-to-r from-green-600 to-blue-600 text-white">
+    <div class="container mx-auto px-6 py-20 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">VitalCore Academy</h1>
+      <p class="text-xl md:text-2xl mb-8">Yoga • Martial Arts Basics • Holistic Wellness — Designed for Middle-Aged Adults</p>
+      <div class="flex gap-4 justify-center">
+        <a href="programs.html#yoga" class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold">Explore Yoga</a>
+        <a href="programs.html#martial" class="bg-transparent border border-white px-6 py-3 rounded-full">Martial Arts Basics</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 py-16">
+    <!-- Intro / Why choose us -->
+    <section class="grid md:grid-cols-3 gap-8 items-center">
+      <div class="md:col-span-2">
+        <h2 class="text-3xl font-bold text-green-700 mb-4">Why VitalCore?</h2>
+        <p class="mb-6 text-lg">We blend gentle yoga practices with practical martial-arts-inspired movement to build balance, mobility and functional strength. Our curriculum is intentionally approachable — ideal for people in their 40s, 50s and beyond who want sustainable wellbeing rather than short-term intensity.</p>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span> Certified instructors trained in adaptive techniques</li>
+          <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span> Small classes with personalized attention</li>
+          <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span> Evidence-based breathing & mobility practices</li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 p-8 rounded-2xl shadow-md">
+        <h3 class="text-xl font-semibold mb-4">Start with a Free Trial</h3>
+        <p class="mb-6">Join a one-week trial (2 classes) and meet our instructors. No pressure — just movement and guidance.</p>
+        <a href="contact.html" class="bg-green-600 text-white px-5 py-3 rounded-lg font-semibold">Book Free Trial</a>
+      </div>
+    </section>
+
+    <!-- Programs Preview -->
+    <section class="mt-16">
+      <h3 class="text-2xl font-bold text-center mb-8 text-blue-700">Our Core Programs</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="p-6 rounded-2xl border">
+          <h4 class="text-xl font-semibold mb-2">Yoga for Balance</h4>
+          <p class="mb-4">Gentle sequences focused on flexibility, breath, and joint health. Modifications available for every level.</p>
+          <a href="programs.html#yoga" class="text-green-600 font-semibold">Read more →</a>
+        </article>
+        <article class="p-6 rounded-2xl border">
+          <h4 class="text-xl font-semibold mb-2">Martial Arts Basics</h4>
+          <p class="mb-4">Low-impact drills adapted from traditional martial arts to improve coordination, posture and reaction time.</p>
+          <a href="programs.html#martial" class="text-green-600 font-semibold">Read more →</a>
+        </article>
+        <article class="p-6 rounded-2xl border">
+          <h4 class="text-xl font-semibold mb-2">Wellness Workshops</h4>
+          <p class="mb-4">Monthly sessions on breathing, nutrition for midlife, recovery, and mindfulness-based stress reduction.</p>
+          <a href="programs.html#wellness" class="text-green-600 font-semibold">Read more →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="mt-16">
+      <h3 class="text-2xl font-bold text-center mb-8 text-blue-700">What Our Members Say</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <blockquote class="p-6 bg-gray-50 rounded-2xl">"After 3 months I have better balance and less back pain. The instructors are patient and practical." — Ritu, 52</blockquote>
+        <blockquote class="p-6 bg-gray-50 rounded-2xl">"I never thought martial arts could be this calming. Great for confidence and mobility." — Ajay, 47</blockquote>
+        <blockquote class="p-6 bg-gray-50 rounded-2xl">"The breathing workshops helped my sleep and stress — simple, effective tools." — Meera, 58</blockquote>
+      </div>
+    </section>
+  </main><footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p class="mb-2">© 2025 
+        <a href="https://vca.planetdigit.com"> VitalCore Academy  - </a> Hosted by <a href="https://www.planetdigit.com">PlanetDigt.com </a> 
+      </p>
+      <p class="text-sm">Solan, HP • 91 7985292092 • Email : care.planetdigit@gmail.com</p>
+    </div>
+  </footer>  <script>
+    const btn = document.getElementById('menuBtn');
+    btn && btn.addEventListener('click', () => alert('Mobile menu placeholder — integrate a drawer or menu here'));
+  </script>
+</body>
+</html>
