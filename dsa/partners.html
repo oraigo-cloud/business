@@ -45,85 +45,82 @@
     </div>
   </nav>
 <main>
-  <!-- Contact Header -->
+  <!-- Page Header -->
   <section class="page-header py-6 bg-light">
     <div class="container">
-      <h1 class="fw-bold text-brand">Contact Us</h1>
-      <p class="lead text-muted">We’re here to help! Reach out for any queries about our programs, admissions, or partnerships.</p>
+      <h1 class="fw-bold text-brand">Our Partners</h1>
+      <p class="lead text-muted">We collaborate with leading organizations to bring the best learning and career opportunities to our students.</p>
     </div>
   </section>
 
-  <!-- Contact Form & Info -->
+  <!-- Partner Categories -->
   <section class="py-6 py-lg-7">
     <div class="container">
-      <div class="row g-5 align-items-center">
-        <!-- Contact Form -->
-        <div class="col-lg-6">
-          <div class="bg-white rounded-2xl p-4 p-lg-5 shadow-soft">
-            <h3 class="mb-3 text-brand">Send Us a Message</h3>
-            <p class="text-muted mb-4">Fill out the form below and our team will get back to you within 24 hours.</p>
-            <form>
-              <div class="row g-3">
-                <div class="col-md-6"><input type="text" class="form-control" placeholder="First Name" required></div>
-                <div class="col-md-6"><input type="text" class="form-control" placeholder="Last Name" required></div>
-                <div class="col-12"><input type="email" class="form-control" placeholder="Email" required></div>
-                <div class="col-12"><input type="tel" class="form-control" placeholder="Phone"></div>
-                <div class="col-12"><textarea class="form-control" rows="4" placeholder="Your Message" required></textarea></div>
-                <div class="col-12 d-grid"><button type="submit" class="btn btn-brand btn-lg">Send Message</button></div>
-              </div>
-            </form>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h3 class="mb-3 text-brand">Academic Partners</h3>
+          <p class="text-muted">We work with top universities and educational institutes to co-create industry-aligned programs, curriculum, and certifications.</p>
+        </div>
+        <div class="col-md-6">
+          <h3 class="mb-3 text-brand">Industry Partners</h3>
+          <p class="text-muted">Our corporate partners provide real-world insights, mentorship, internships, and placement opportunities for our learners.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Logos -->
+  <section class="py-6 py-lg-7 bg-light">
+    <div class="container text-center">
+      <h3 class="mb-5 text-brand">Trusted by Leading Organizations</h3>
+      <div class="row g-4 justify-content-center align-items-center">
+        <div class="col-6 col-md-3">
+          <img src="img/partners/mizpah.jpg" class="img-fluid" alt="Partner 1 Logo">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="" class="img-fluid" alt="">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="" class="img-fluid" alt="">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Testimonials -->
+  <section class="py-6 py-lg-7">
+    <div class="container">
+      <h3 class="mb-5 text-brand text-center">What Our Partners Say</h3>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="p-4 bg-white rounded-2xl shadow-soft h-100">
+            <p class="text-muted">"DataSphere has been an exceptional partner in co-developing programs that truly prepare students for the data industry."</p>
+            <strong class="d-block mt-2">– John Doe, Head of Learning, PartnerCorp</strong>
           </div>
         </div>
-
-        <!-- Contact Info -->
-        <div class="col-lg-6">
-          <h3 class="mb-3 text-brand">Our Office</h3>
-          <p class="text-muted mb-4">Reach out via email, phone, or visit us in person. We’d love to hear from you!</p>
-          <ul class="list-unstyled fs-6">
-            <li class="mb-3"><i class="bi bi-geo-alt text-brand me-2"></i> Bengaluru, India</li>
-            <li class="mb-3"><i class="bi bi-telephone text-brand me-2"></i> +91 98765 43210</li>
-            <li class="mb-3"><i class="bi bi-envelope text-brand me-2"></i> hello@datasphere.academy</li>
-          </ul>
-
-          <!-- Optional Map -->
-          <div class="mt-4 rounded-2xl overflow-hidden shadow-soft">
-            <iframe class="w-100" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.671234567!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae167f3!2sBengaluru!5e0!3m2!1sen!2sin!4v1694191580371!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="col-md-6">
+          <div class="p-4 bg-white rounded-2xl shadow-soft h-100">
+            <p class="text-muted">"The collaboration with DataSphere has helped our organization reach and mentor a talented pool of data professionals."</p>
+            <strong class="d-block mt-2">– Jane Smith, Director of Partnerships, TechGlobal</strong>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- CTA Section -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h3 class="mb-3">Become a Partner</h3>
+      <p class="text-muted mb-4">Collaborate with us to create impactful programs, mentorship opportunities, and placements for learners.</p>
+      <a href="contact.html" class="btn btn-brand btn-lg">Contact Us</a>
+    </div>
+  </section>
 </main>
-
-<script>
-
-  document.getElementById("contactForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  let data = {
-    firstName: this.firstName.value,
-    lastName: this.lastName.value,
-    email: this.email.value,
-    phone: this.phone.value,
-    message: this.message.value
-  };
-
-  fetch("https://script.google.com/macros/s/AKfycbxhEqIHoTw9dIKG47fgnUKLMnndDLrE3dAlphOnr4BwaxZXT8jGJv0BWMUcoLBgEomcrQ/exec", {
-    method: "POST",
-    mode: "no-cors", // Google Apps Script requires this for static sites
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  })
-  .then(() => {
-    alert("✅ Thank you! Your message has been sent.");
-    this.reset();
-  })
-  .catch(err => alert("❌ Error: " + err));
-});
-
-</script>  <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer class="pt-5 pb-4">
     <div class="container">
       <div class="row g-4">
