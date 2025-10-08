@@ -191,37 +191,40 @@
       </div>
       <div class="modal-body">
         <p class="text-muted mb-3">Fill in your details to schedule a free demo session with our mentors.</p>
+        
+
         <form id="bookDemoForm">
-          <div class="row g-3">
-            <div class="col-12 col-md-6">
-              <input class="form-control" name="firstName" placeholder="First name" required>
-            </div>
-            <div class="col-12 col-md-6">
-              <input class="form-control" name="lastName" placeholder="Last name" required>
-            </div>
-            <div class="col-12">
-              <input type="email" class="form-control" name="email" placeholder="Email" required>
-            </div>
-            <div class="col-12">
-              <input type="tel" class="form-control" name="phone" placeholder="Phone number">
-            </div>
-            <div class="col-12">
-              <select class="form-select" name="program" required>
-                <option value="" disabled selected>Choose a program</option>
-                <option>Data Analytics</option>
-                <option>Data Science</option>
-                <option>AI / Machine Learning</option>
-                <option>Data Engineering</option>
-              </select>
-            </div>
-            <div class="col-12">
-              <input type="date" class="form-control" name="preferredDate" required>
-            </div>
-            <div class="col-12 d-grid">
-              <button type="submit" class="btn btn-brand btn-lg">Book Demo</button>
-            </div>
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <input id="firstName" name="firstName" class="form-control" placeholder="First name" required>
           </div>
-        </form>
+          <div class="col-12 col-md-6">
+            <input id="lastName" name="lastName" class="form-control" placeholder="Last name" required>
+          </div>
+          <div class="col-12">
+            <input id="email" type="email" name="email" class="form-control" placeholder="Email" required>
+          </div>
+          <div class="col-12">
+            <input id="phone" type="tel" name="phone" class="form-control" placeholder="Phone number" required>
+          </div>
+          <div class="col-12">
+            <select id="program" name="program" class="form-select" required>
+              <option value="" disabled selected>Choose a program</option>
+              <option value="Data Analytics">Data Analytics</option>
+              <option value="Data Science">Data Science</option>
+              <option value="AI / Machine Learning">AI / Machine Learning</option>
+              <option value="Data Engineering">Data Engineering</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <input id="preferredDate" type="date" name="preferredDate" class="form-control" required>
+          </div>
+          <div class="col-12 d-grid">
+            <button type="submit" class="btn btn-brand btn-lg">Book Demo</button>
+          </div>
+        </div>
+      </form>
+
       </div>
     </div>
   </div>
