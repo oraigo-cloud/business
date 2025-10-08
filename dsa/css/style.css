@@ -70,3 +70,9 @@
     main {
     padding-top: 100px; /* adjust if navbar is taller/shorter */
     }
+
+.logo {
+    max-width: 200px;   /* Maximum width of the logo */
+    height: auto;       /* Maintain aspect ratio */
+    margin-top: 20px;
+  }
