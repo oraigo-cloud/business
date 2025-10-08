@@ -17,7 +17,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!--  <script src="js/form-handler.js" defer></script> -->
 </head>
 
 <body>  <!-- NAVBAR (reuse same as index.html) -->
@@ -79,37 +78,38 @@
             <h5 class="mb-1 text-brand">Get a free career consultation</h5>
             <p class="text-muted mb-3">Tell us about your goals. We’ll suggest the best path.</p>
 
-            <form id="sheetForm">
-              <div class="row g-3">
-                <div class="col-12 col-md-6">
-                  <input class="form-control" name="firstName" placeholder="First name" required>
-                </div>
-                <div class="col-12 col-md-6">
-                  <input class="form-control" name="lastName" placeholder="Last name" required>
-                </div>
-                <div class="col-12">
-                  <input type="email" class="form-control" name="email" placeholder="Email" required>
-                </div>
-                <div class="col-12">
-                  <input type="tel" class="form-control" name="phone" placeholder="Phone">
-                </div>
-                <div class="col-12">
-                  <select class="form-select" name="interest" required>
-                    <option value="" disabled selected>I'm interested in…</option>
-                    <option>Data Analytics</option>
-                    <option>Data Science</option>
-                    <option>AI / Machine Learning</option>
-                    <option>Data Engineering</option>
-                  </select>
-                </div>
-                <div class="col-12 d-grid">
-                  <button class="btn btn-brand btn-lg" type="submit">Request Callback</button>
-                </div>
-                <div class="col-12 small text-muted">
-                  By submitting, you agree to our Terms & Privacy.
-                </div>
+            <form id="requestCallBackForm">
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <input type="text" id="firstName" name="firstName" class="form-control" placeholder="First name" required>
               </div>
+              <div class="col-12 col-md-6">
+                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last name" required>
+              </div>
+              <div class="col-12">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+              </div>
+              <div class="col-12">
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone">
+              </div>
+              <div class="col-12">
+                <select id="interest" name="interest" class="form-select" required>
+                  <option value="" disabled selected>I'm interested in…</option>
+                  <option value="Data Analytics">Data Analytics</option>
+                  <option value="Data Science">Data Science</option>
+                  <option value="AI / Machine Learning">AI / Machine Learning</option>
+                  <option value="Data Engineering">Data Engineering</option>
+                </select>
+              </div>
+              <div class="col-12 d-grid">
+                <button type="submit" class="btn btn-brand btn-lg">Request Callback</button>
+              </div>
+              <div class="col-12 small text-muted">
+                By submitting, you agree to our Terms & Privacy.
+              </div>
+            </div>
           </form>
+
           
           </div>
         </div>
@@ -372,38 +372,7 @@
         <br>
       </div>
     </div>
-  </section>
-
-
-
-
-  <script>
-      document.getElementById("sheetForm").addEventListener("submit", function(e){
-    e.preventDefault();
-
-    let data = {
-      firstName: this.firstName.value,
-      lastName: this.lastName.value,
-      email: this.email.value,
-      phone: this.phone.value,
-      interest: this.interest.value
-    };
-
-    fetch("https://script.google.com/macros/s/AKfycbyeDyW0qfBljj5JyzaXOJSElRwW1E20jAwTOseR44rBYwKErkQtvqtVHFiemrhxu4da/exec", {
-      method: "POST",
-      mode: "no-cors", // Google Apps Script requires this for static sites
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-    .then(() => {
-      alert("✅ Your request has been submitted! You will receive a call from us shortly. ");
-      this.reset();
-    })
-    .catch(err => alert("❌ Error: " + err));
-  });
-  </script>  <!-- FOOTER -->
+  </section>  <!-- FOOTER -->
   <footer class="pt-5 pb-4">
     <div class="container">
       <div class="row g-4">
@@ -506,7 +475,12 @@
 
 <script src="js/script.js"></script>
 <script src="js/banner.js"></script>
+
+
 <script src="js/bd_form.js"></script>
+<script src="js/contact_form.js"></script>
+<script src="js/callback_form.js"></script>
+
 
 </body>
 </html>
