@@ -19,6 +19,8 @@ document.getElementById("requestCallBackForm").addEventListener("submit", async 
     const text = await response.text();
     console.log("Server response:", text);
 
+    alert("Submitted")
+    
     if (text.includes("✅ Success")) {
       alert("✅ Your callback request has been submitted!");
       form.reset();
