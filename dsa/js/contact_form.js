@@ -19,6 +19,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
     const text = await response.text();
     console.log("Server response:", text);
 
+    alert("Submitted")
     if (text.includes("✅ Success")) {
       alert("✅ Your message has been sent successfully!");
       form.reset();
