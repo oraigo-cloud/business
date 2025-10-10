@@ -1,29 +1,31 @@
-document.getElementById('brochureForm').addEventListener('submit', async function(e) {
+document.getElementById("brochureForm").addEventListener("submit", async function(e) {
   e.preventDefault();
 
   const form = e.target;
-  const formData = new FormData(form);
-  const email = formData.get('email').trim(); // <-- uses the name attribute
+  const formData = new FormData();
 
-  if (!email) {
-    document.getElementById('formMessage').textContent = 'Please enter a valid email.';
-    return;
-  }
-
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyT1gD9AFHvHta8g_9OtzBQ02ttdnUrzd0rQF1wagl3y9oagC18VIAiOivqc6wowFpJ3A/exec';
+  // Add email from the form
+  formData.append("Email", form.Email.value);
 
   try {
-    const response = await fetch(scriptURL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email })
+    const response = await fetch("https://script.google.com/macros/s/AKfycbyn337Qzq7u7X92xha1pb1ucPbDiqohchlNhTTmiJwW2U6RvaV3LsoGrzXZesxyOkX_Fg/exec", {
+      method: "POST",
+      body: formData
     });
 
-    const result = await response.json();
-    document.getElementById('formMessage').textContent = result.message || 'Request completed.';
-    form.reset(); // clears the input after successful submission
-  } catch (error) {
-    console.error('Error sending email:', error);
-    document.getElementById('formMessage').textContent = 'An error occurred. Please try again later.';
+    const text = await response.text();
+    console.log("Server response:", text);
+
+    alert("Submitted")
+
+
+    if (text.includes("✅")) {
+      alert("✅ Brochure sent successfully!");
+      form.reset();
+    } else {
+      alert("⚠️ Something went wrong: " + text);
+    }
+  } catch (err) {
+    alert("❌ Error: " + err.message);
   }
 });
