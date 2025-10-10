@@ -30,7 +30,7 @@ document.getElementById("applicationForm").addEventListener("submit", async func
   }
 
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbxSIZN4BJH3rlVVe6gHE_nMpkPBgxhq55ujnDIxr9NkCKvFpIEorqg3-2BDshWMbThRWg/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbwzu-uCSPaZTpUqJxZVBabS5IXi06jU-sKlc--OFg12sSRdeJ0m-duS-KQboSt8ERog-g/exec", {
       method: "POST",
       body: formData
     });
