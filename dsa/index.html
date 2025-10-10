@@ -366,10 +366,19 @@
           <h4 class="text-brand mb-2">Stay in the loop</h4>
           <h2 class="fw-bold" style="color:var(--text-dark)">Get the syllabus & updates</h2>
           <p class="text-muted">We’ll send you the latest syllabus, scholarships, and cohort dates.</p>
-          <form class="row g-2">
-            <div class="col-12 col-md-8"><input type="email" class="form-control form-control-lg" placeholder="Enter your email" required></div>
-            <div class="col-12 col-md-4 d-grid"><button class="btn btn-brand btn-lg" type="submit">Send Brochure</button></div>
-          </form>
+
+          <form id="brochureForm" class="row g-2">
+          <div class="col-12 col-md-8">
+            <input type="email" id="emailInput" name="email" class="form-control form-control-lg"
+                  placeholder="Enter your email" required>
+          </div>
+          <div class="col-12 col-md-4 d-grid">
+            <button class="btn btn-brand btn-lg" type="submit">Send Brochure</button>
+          </div>
+        </form>
+        <p id="formMessage" style="margin-top: 1rem; color: green;"></p>
+
+
           <div class="small text-muted mt-2">No spam. Unsubscribe anytime.</div>
         </div>
         <div class="col-lg-6">
@@ -488,6 +497,7 @@
 <script src="js/callback_form.js"></script>
 
 <script src="js/apply_form.js"></script>
+<script src="js/brochure_form.js"></script>
 
 
 
