@@ -5,26 +5,26 @@ document.getElementById("applicationForm").addEventListener("submit", async func
   const formData = new FormData();
 
   // Personal Info
-  formData.append("Full Name", form.querySelector('input[type="text"]').value);
-  formData.append("Email", form.email.value || form.querySelector('input[type="email"]').value);
-  formData.append("Phone", form.phone.value || form.querySelector('input[type="tel"]').value);
-  formData.append("City/Country", form.querySelector('input[placeholder*="City"]').value);
+  formData.append("FullName", form.FullName.value);
+  formData.append("Email", form.Email.value);
+  formData.append("Phone", form.Phone.value);
+  formData.append("Location", form.Location.value);
 
   // Program Details
-  formData.append("Program", form.querySelector('select').value);
-  formData.append("Preferred Start Month", form.querySelector('input[type="month"]').value);
+  formData.append("Program", form.Program.value);
+  formData.append("PreferredMonth", form.PreferredMonth.value);
 
   // Background
-  formData.append("Highest Qualification", form.querySelector('input[placeholder*="Qualification"]').value);
-  formData.append("Experience", form.querySelector('select[required]:not([name="Program"])').value);
-  formData.append("Background Description", form.querySelector('textarea[placeholder*="experience and interests"]').value);
+  formData.append("Qualification", form.Qualification.value);
+  formData.append("Experience", form.Experience.value);
+  formData.append("Background", form.Background.value);
 
   // Motivation & Career Goals
-  formData.append("Motivation", form.querySelector('textarea[placeholder*="motivation"]').value);
-  formData.append("Career Goals", form.querySelector('textarea[placeholder*="Career Goals"]').value);
+  formData.append("Motivation", form.Motivation.value);
+  formData.append("CareerGoals", form.CareerGoals.value);
 
   // Resume (optional)
-  const resumeFile = form.querySelector('input[type="file"]').files[0];
+  const resumeFile = form.Resume.files[0];
   if (resumeFile) {
     formData.append("Resume", resumeFile);
   }

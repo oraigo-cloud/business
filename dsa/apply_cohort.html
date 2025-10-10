@@ -127,76 +127,79 @@
       </div>
 
       <div class="card shadow-soft border-0 p-4 p-lg-5 mx-auto" style="max-width: 800px;">
-        <form id="applicationForm" novalidate>
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label class="form-label fw-semibold">Full Name</label>
-            <input type="text" class="form-control" name="FullName" required placeholder="Your name">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label fw-semibold">Email</label>
-            <input type="email" class="form-control" name="Email" required placeholder="you@email.com">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label fw-semibold">Phone Number</label>
-            <input type="tel" class="form-control" name="Phone" required placeholder="+91 90000 00000">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label fw-semibold">City / Country</label>
-            <input type="text" class="form-control" name="Location" required placeholder="e.g., Bangalore, India">
-          </div>
 
-          <div class="col-md-6">
-            <label class="form-label fw-semibold">Program Applying For</label>
-            <select class="form-select" name="Program" required>
-              <option value="" disabled selected>Select Program</option>
-              <option>Data Analytics Bootcamp</option>
-              <option>Data Science & ML</option>
-              <option>GenAI for Developers</option>
-              <option>Data Engineering</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label fw-semibold">Preferred Start Month</label>
-            <input type="month" class="form-control" name="PreferredMonth" required>
-          </div>
 
-          <div class="col-12">
-            <label class="form-label fw-semibold">Highest Qualification</label>
-            <input type="text" class="form-control" name="Qualification" required placeholder="e.g., B.Tech in Computer Science">
-          </div>
-          <div class="col-12">
-            <label class="form-label fw-semibold">Experience in Data / Programming</label>
-            <select class="form-select" name="Experience" required>
-              <option value="" disabled selected>Select</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-          </div>
-          <div class="col-12">
-            <label class="form-label fw-semibold">Briefly Describe Your Background</label>
-            <textarea class="form-control" name="Background" rows="3" placeholder="Tell us about your experience and interests"></textarea>
-          </div>
-
-          <div class="col-12">
-            <label class="form-label fw-semibold">Why do you want to join this program?</label>
-            <textarea class="form-control" name="Motivation" rows="3" placeholder="Share your motivation"></textarea>
-          </div>
-          <div class="col-12">
-            <label class="form-label fw-semibold">Career Goals after completion</label>
-            <textarea class="form-control" name="CareerGoals" rows="2" placeholder="e.g., Become a Data Analyst, ML Engineer, etc."></textarea>
-          </div>
-
-          <div class="col-12">
-            <label class="form-label fw-semibold">Upload Resume (optional)</label>
-            <input type="file" class="form-control" name="Resume" accept=".pdf,.doc,.docx">
-          </div>
-
-          <div class="col-12 d-grid">
-            <button class="btn btn-brand btn-lg mt-3" type="submit">Submit Application</button>
-          </div>
+      <form id="applicationForm" novalidate>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label fw-semibold" for="FullName">Full Name</label>
+          <input type="text" id="FullName" class="form-control" name="FullName" required placeholder="Your name">
         </div>
-      </form>
+        <div class="col-md-6">
+          <label class="form-label fw-semibold" for="Email">Email</label>
+          <input type="email" id="Email" class="form-control" name="Email" required placeholder="you@email.com">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label fw-semibold" for="Phone">Phone Number</label>
+          <input type="tel" id="Phone" class="form-control" name="Phone" required placeholder="+91 90000 00000">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label fw-semibold" for="Location">City / Country</label>
+          <input type="text" id="Location" class="form-control" name="Location" required placeholder="e.g., Bangalore, India">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label fw-semibold" for="Program">Program Applying For</label>
+          <select id="Program" class="form-select" name="Program" required>
+            <option value="" disabled selected>Select Program</option>
+            <option>Data Analytics Bootcamp</option>
+            <option>Data Science & ML</option>
+            <option>GenAI for Developers</option>
+            <option>Data Engineering</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label fw-semibold" for="PreferredMonth">Preferred Start Month</label>
+          <input type="month" id="PreferredMonth" class="form-control" name="PreferredMonth" required>
+        </div>
+
+        <div class="col-12">
+          <label class="form-label fw-semibold" for="Qualification">Highest Qualification</label>
+          <input type="text" id="Qualification" class="form-control" name="Qualification" required placeholder="e.g., B.Tech in Computer Science">
+        </div>
+        <div class="col-12">
+          <label class="form-label fw-semibold" for="Experience">Experience in Data / Programming</label>
+          <select id="Experience" class="form-select" name="Experience" required>
+            <option value="" disabled selected>Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <label class="form-label fw-semibold" for="Background">Briefly Describe Your Background</label>
+          <textarea id="Background" class="form-control" name="Background" rows="3" placeholder="Tell us about your experience and interests"></textarea>
+        </div>
+
+        <div class="col-12">
+          <label class="form-label fw-semibold" for="Motivation">Why do you want to join this program?</label>
+          <textarea id="Motivation" class="form-control" name="Motivation" rows="3" placeholder="Share your motivation"></textarea>
+        </div>
+        <div class="col-12">
+          <label class="form-label fw-semibold" for="CareerGoals">Career Goals after completion</label>
+          <textarea id="CareerGoals" class="form-control" name="CareerGoals" rows="2" placeholder="e.g., Become a Data Analyst, ML Engineer, etc."></textarea>
+        </div>
+
+        <div class="col-12">
+          <label class="form-label fw-semibold" for="Resume">Upload Resume (optional)</label>
+          <input type="file" id="Resume" class="form-control" name="Resume" accept=".pdf,.doc,.docx">
+        </div>
+
+        <div class="col-12 d-grid">
+          <button class="btn btn-brand btn-lg mt-3" type="submit">Submit Application</button>
+        </div>
+      </div>
+    </form>
+
 
 
       </div>
