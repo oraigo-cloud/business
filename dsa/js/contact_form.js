@@ -5,12 +5,13 @@ document.getElementById("contactForm").addEventListener("submit", async function
   const formData = new FormData();
 
   // Combine first and last name
-  formData.append("Name", form.name.value);
+  formData.append("Name", form.firstName.value + " " + form.lastName.value);
   formData.append("Email", form.email.value);
+  formData.append("Phone", form.phone.value);
   formData.append("Message", form.message.value);
 
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbzdRfNhORmL_zpCovdf2CHo_-y9zE7qmkWpR65FHx29sAMBIYrNHoEZSFcciaTXj19R/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbzPfRPn46Ppq9vPXRlDQWAuMnryXOzzeFDLn3HWMg7QXWO8sx0EitfHdbiZTxEh7HxRZw/exec", {
       method: "POST",
       body: formData
     });
@@ -18,6 +19,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
     const text = await response.text();
     console.log("Server response:", text);
 
+    alert("Submitted")
     if (text.includes("✅ Success")) {
       alert("✅ Your message has been sent successfully!");
       form.reset();
